@@ -9,7 +9,7 @@ Si estas sobre una máquina virtual de Debian recién instalada y no tienes el D
 
 ## ¿Y si no quiero usar Docker Engine?
 
-    En este mismo directorio encontrarás un [tutorial](./instalacion-sin-docker.md) que te describe los pasos necesarios para instalar Redmine de forma directa en tu sistema Debian.
+En este mismo directorio encontrarás un [tutorial](./instalacion-sin-docker.md) que te describe los pasos necesarios para instalar Redmine de forma directa en tu sistema Debian.
     
     
 ## Referencias:
