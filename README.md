@@ -4,11 +4,15 @@ Este directorio contiene un simple archivo de docker-compose para el despliegue 
 
 ## ¿Como instalar Docker Engine?
 
-Si estas sobre una máquina virtual de Debian recién instalada y no tienes el
-Docker Engine instalado puedes abrir sesión como `root`, entrar a este mismo
-directorio y ejecutar el script `install-docker`.
+Si estas sobre una máquina virtual de Debian recién instalada y no tienes el Docker Engine instalado puedes abrir sesión como `root`, entrar a este mismo directorio y ejecutar el script `instalar-docker`.
 
-Referencias:
 
-- https://docs.docker.com/engine/install/debian/
-- https://hub.docker.com/_/redmine/
+## ¿Y si no quiero usar Docker Engine?
+
+    En este mismo directorio encontrarás un [tutorial](./instalacion-sin-docker.md) que te describe los pasos necesarios para instalar Redmine de forma directa en tu sistema Debian.
+    
+    
+## Referencias:
+
+- Instalación de Docker: https://docs.docker.com/engine/install/debian/
+- Imagen de Redmine en DockerHub: https://hub.docker.com/_/redmine/
