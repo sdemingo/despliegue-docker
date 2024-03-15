@@ -4,6 +4,13 @@ Este directorio contiene un simple archivo de docker-compose para el despliegue 
 
 Una vez allí nos podremos logear usando el usuario `admin` y la contraseña `admin`.
 
+## ¿Como instalar Docker Engine?
+
+Si estas sobre una máquina virtual de Debian recién instalada y no tienes el
+Docker Engine instalado puedes abrir sesión como `root`, entrar a este mismo
+directorio y ejecutar el script `install-docker`.
+
 Referencias:
 
+- https://docs.docker.com/engine/install/debian/
 - https://hub.docker.com/_/redmine/
