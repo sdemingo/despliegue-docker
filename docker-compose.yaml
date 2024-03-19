@@ -1,31 +1,24 @@
 
-version: '3.1'
+version: "3"
+
+networks:
+  gitea:
+    external: false
 
 services:
-
-  redmine:
-    image: redmine
-    restart: always
-    ports:
-      - 8080:3000
+  server:
+    image: gitea/gitea:1.21.7
+    container_name: gitea
     environment:
-      REDMINE_DB_MYSQL: db
-      REDMINE_DB_PASSWORD: example
-      REDMINE_SECRET_KEY_BASE: supersecretkey
-    volumes:
-        - redmine:/usr/src/redmine/files
-  db:
-    image: mysql:8.0
+      - USER_UID=1000
+      - USER_GID=1000
     restart: always
-    ports:
-        - 3306:3306
-    environment:
-      MYSQL_ROOT_PASSWORD: example
-      MYSQL_DATABASE: redmine
+    networks:
+      - gitea
     volumes:
-        - db:/var/lib/mysql
-
-volumes:
-    redmine:
-    db:
-
+      - ./gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3000:3000"
+      - "222:22"
