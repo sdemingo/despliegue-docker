@@ -10,7 +10,14 @@ En este repositorio se muestran escenarios de despliegue de servicios típicos q
 
 ## ¿Como instalar Docker Engine?
 
-Si estas sobre una máquina virtual de Debian recién instalada y no tienes el Docker Engine instalado puedes abrir sesión como `root`, entrar a este mismo directorio y ejecutar el script `instalar-docker`. Una vez tengas el Docker Engine instalado en tu Debian puede interesarte tener un gestor gráfico para manejar contenedores, imágenes, volúmenes, etc. Uno muy fácil de instalar y usar es [Portainer](https://docs.portainer.io/user/home) que se instala como un contenedor más simplemente ejecutando sobre la máquina anfitriona:
+Si estas sobre una máquina virtual de Debian recién instalada y no tienes el Docker Engine instalado puedes abrir sesión como `root`, entrar a este mismo directorio y ejecutar el script `instalar-docker`. Tras esto solo faltaría introducir a tu usuario en el grupo docker.
+
+```
+# ./instalar-docker
+# usermod -aG docker tuusuario
+```
+
+Una vez tengas el Docker Engine instalado en tu Debian puede interesarte tener un gestor gráfico para manejar contenedores, imágenes, volúmenes, etc. Uno muy fácil de instalar y usar es [Portainer](https://docs.portainer.io/user/home) que se instala como un contenedor más simplemente ejecutando sobre la máquina anfitriona:
 
 ```
 docker volume create portainer_data
