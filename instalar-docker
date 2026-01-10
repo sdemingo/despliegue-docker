@@ -20,6 +20,6 @@ apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 
 echo "Ejecuta ahora el siguiente comando y comprueba que no obtienes errores:"
 echo 
-echo -n "\t\t docker run hello-world"
+echo -en "\t\t docker run hello-world"
 echo
 echo

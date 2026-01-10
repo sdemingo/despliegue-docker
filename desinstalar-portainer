@@ -1,0 +1,10 @@
+#!/bin/bash
+
+docker rm -f portainer
+docker volume rm portainer_data
+
+echo 
+echo
+echo -e "\tPortainer ha sido eliminado del sistema"
+echo
+echo
