@@ -1,7 +1,7 @@
 
 # Repositorio Debian sobre un contenedor
 
-Vamos a construir un repositorio que funcione sobre un contenedor Docker. Este repositorio lo vamos a construir sobre Debian y va tener, además de su estructura de ficheros base los siguientes directorios:
+Vamos a construir un repositorio que funcione sobre un contenedor Docker. La idea de este repositorio es ofrecer ubicación  para una aplicación de fabricación propia que queremos publicar en forma de paquete Debian y que se llama `paqprueba`. Este repositorio lo vamos a construir sobre Debian y va tener, además de su estructura de ficheros base los siguientes directorios:
 
 ```
 /
