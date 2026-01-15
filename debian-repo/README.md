@@ -1,7 +1,28 @@
 
 # Repositorio Debian sobre un contenedor
 
-Lo primero que necesitamos es construir una imagen de nuestro contenedor pues esta no la vamos a encontrar en dockerhub. Para construir esta imagen usaremos el comando:
+Vamos a construir un repositorio que funcione sobre un contenedor Docker. Este repositorio lo vamos a construir sobre Debian y va tener, además de su estructura de ficheros base los siguientes directorios:
+
+```
+/
+ │
+ ├─ repo/
+ │    ├─ dists/
+ │    ├─ pool/
+ │    └─ conf/
+ │        └─ distributions
+ │
+ ├─ etc/
+ │    └─ nginx/
+ │         └─ nginx.conf
+ │
+ └─ build/
+      └─ paqprueba.deb
+```
+
+El directorio `repo` y todo su contenido es básicamente la estructura fundamental del repositorio y su configuración. Será creada por el scritp `reprepro` que viene instalado en nuestra Debian. Además tendremos la configuración del servidor web `nginx` que la tomamos del fichero `nginx.conf`de este mismo directorio y que instalaremos dentro del directorio `/etc/nginx/nginx.conf` de nuestro contenedor. Para terminar, todos los paquetes que queramos servir de forma adicional a la caché ofrecida por el servidor (como es el caso del paquete `paqprueba` irán contenidos en el directorio `/build`. 
+
+Como la imagen tal y como la necesitamos no se encuentra en Dockerhub la tenemos que crear a partir del fichero `Dockerfile` ubicado en este mismo directorio. Para construir esta imagen usaremos el comando:
 
 ```
 docker build --no-cache -t debian-repo .
