@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Definir la ruta base donde quieras los archivos
+BASE_DIR="./nagios_data"
+
+echo "Creando estructura de directorios en $BASE_DIR..."
+
+mkdir -p $BASE_DIR
+
+cp -r ./etc_base $BASE_DIR/etc
+
+mkdir -p $BASE_DIR/etc/objects
+mkdir -p $BASE_DIR/libexec
+mkdir -p $BASE_DIR/plugins
+
+chmod -R 775 $BASE_DIR
+chown -R 1000:1000 $BASE_DIR 
+
+echo "Listo. Ahora puedes lanzar docker-compose up -d"
+
